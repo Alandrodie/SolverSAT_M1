@@ -16,11 +16,9 @@ public:
 
 
 
+
 private:
     vector<int> clause;
-
-
-
 };
 
 

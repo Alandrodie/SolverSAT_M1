@@ -9,12 +9,13 @@ Solveur::Solveur()
 
 Solveur::~Solveur()
 {
+    
 }
 
 Formule Solveur::simplify(Formule formule, int l)
 {
     Formule res;
-
+    res.setvariablesFormule(formule.getVariables());
     for(Clause c : formule.getClauses())
     {
 
@@ -40,6 +41,7 @@ Formule Solveur::simplify(Formule formule, int l)
     }
     return res;
 
+
 }
 vector<int> Solveur::backtracking(Formule f)
 {
@@ -47,6 +49,8 @@ vector<int> Solveur::backtracking(Formule f)
         vector<int> variablesFormule = f.getVariables();
         int lit = variablesFormule[variablesFormule.size()-1];
         variablesFormule.pop_back();
+        f.setvariablesFormule(variablesFormule);
+        
         Formule f2 = simplify(f, lit);
         if (f2.getClauses().size() == 0)
         {

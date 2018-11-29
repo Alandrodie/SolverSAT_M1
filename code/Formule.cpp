@@ -2,6 +2,9 @@
 
 Formule::Formule(/* args */)
 {
+    formule = vector<Clause>();
+    variablesFormule = vector<int>();
+    
 }
 
 Formule::~Formule()
@@ -33,4 +36,11 @@ bool Formule::containsEmptyClause()
 vector<Clause> Formule::getClauses()
 {
     return formule;
+}
+
+
+void Formule::setvariablesFormule(vector<int> variables)
+{
+    this->variablesFormule = variables;
+
 }

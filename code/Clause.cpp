@@ -9,6 +9,8 @@
 
     Clause::Clause(vector<int> vect)
     {
+        clause=vect;
+        
     }
 
     Clause::~Clause()

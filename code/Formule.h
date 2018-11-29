@@ -16,7 +16,8 @@ class Formule
         vector<Clause> getClauses();
         vector<int> getVariables();
         bool containsEmptyClause();
-        
+        void setvariablesFormule(vector<int> variables);
+
     private:
         vector<Clause> formule;
         vector<int> variablesFormule;
